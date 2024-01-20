@@ -6,12 +6,12 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
 ## Documentation completion status
 
 1. Getting Started :ballot_box_with_check:
-    1. Installation
-    2. Hello, World!
-    3. Hello, Cargo!
+    1. Installation :ballot_box_with_check:
+    2. Hello, World! :ballot_box_with_check:
+    3. Hello, Cargo! :ballot_box_with_check:
 2. Programming a Guessing Game :ballot_box_with_check:
-3. Common Programming Concepts
-    1. Variables and Mutability
+3. Common Programming Concepts :hourglass_flowing_sand:
+    1. Variables and Mutability :hourglass_flowing_sand:
     2. Data Types
     3. Functions
     4. Comments
