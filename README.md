@@ -5,11 +5,11 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
 
 ## Documentation completion status
 
-1. [x] Getting Started
+1. Getting Started :ballot_box_with_check:
     1.1. Installation
     1.2. Hello, World!
     1.3. Hello, Cargo!
-2. [ ] Programming a Guessing Game
+2. Programming a Guessing Game :ballot_box_with_check:
 3. Common Programming Concepts
     3.1. Variables and Mutability
     3.2. Data Types
