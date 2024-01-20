@@ -6,16 +6,16 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
 ## Documentation completion status
 
 1. Getting Started :ballot_box_with_check:
-    1.1. Installation
-    1.2. Hello, World!
-    1.3. Hello, Cargo!
+    1. Installation
+    2. Hello, World!
+    3. Hello, Cargo!
 2. Programming a Guessing Game :ballot_box_with_check:
 3. Common Programming Concepts
-    3.1. Variables and Mutability
-    3.2. Data Types
-    3.3. Functions
-    3.4. Comments
-    3.5. Control Flow
+    1. Variables and Mutability
+    2. Data Types
+    3. Functions
+    4. Comments
+    5. Control Flow
 4. Understanding Ownership
     4.1. What is Ownership?
     4.2. References and Borrowing
