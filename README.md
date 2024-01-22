@@ -12,8 +12,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
 2. Programming a Guessing Game :ballot_box_with_check:
 3. Common Programming Concepts :hourglass_flowing_sand:
     1. Variables and Mutability :ballot_box_with_check:
-    2. Data Types :hourglass_flowing_sand:
-    3. Functions
+    2. Data Types :ballot_box_with_check:
+    3. Functions :hourglass_flowing_sand:
     4. Comments
     5. Control Flow
 4. Understanding Ownership
