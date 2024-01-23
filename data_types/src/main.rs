@@ -66,7 +66,8 @@ fn main() {
     let array_a = [1, 2, 3];
     let first_element = array_a[0];
 
-    let array_b = [3; 5]; // this creates -> [3,3,3,3,3];
+    let mut array_b = [3; 5]; // this creates -> [3,3,3,3,3];
+    array_b[1] = 5;
     let second_element = array_b[1];
 
     println!("The first element of array_a is: {first_element} and second of array_b is: {second_element}");
