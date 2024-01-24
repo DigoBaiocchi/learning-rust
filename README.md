@@ -13,9 +13,9 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
 3. Common Programming Concepts :hourglass_flowing_sand:
     1. Variables and Mutability :ballot_box_with_check:
     2. Data Types :ballot_box_with_check:
-    3. Functions :hourglass_flowing_sand:
-    4. Comments
-    5. Control Flow
+    3. Functions :ballot_box_with_check:
+    4. Comments :ballot_box_with_check:
+    5. Control Flow :hourglass_flowing_sand:
 4. Understanding Ownership
     1. What is Ownership?
     2. References and Borrowing
