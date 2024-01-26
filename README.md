@@ -17,8 +17,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     4. Comments :ballot_box_with_check:
     5. Control Flow :ballot_box_with_check:
 4. Understanding Ownership :hourglass_flowing_sand:
-    1. What is Ownership? :hourglass_flowing_sand:
-    2. References and Borrowing
+    1. What is Ownership? :ballot_box_with_check:
+    2. References and Borrowing :hourglass_flowing_sand:
     3. The Slice Type
 5. Using Structs to Structure Related Data
     1. Defining and Instantiating Structs
