@@ -54,6 +54,7 @@ fn main() { // s and string are not valid here, it’s not yet declared
     let ss3 = takes_and_gives_back(ss2);    // ss2 is moved into
                                                             // takes_and_gives_back, which also
                                                             // moves its return value into ss3
+    println!("{ss1}, {ss3}");
 
 } // this scope is now over, and s and string are no longer valid
   // Here, ss3 goes out of scope and is dropped. ss2 was moved, so nothing

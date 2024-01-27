@@ -68,7 +68,12 @@ fn main() {
         println!("{number}");
     }
 
-    println!("{}", get_fibonacci(19))
+    println!("{}", get_fibonacci(19));
+
+    let celsius_temperature = 5;
+    let fahrenheit_temperature = celsius_to_fahrenheit(celsius_temperature);
+
+    println!("{celsius_temperature} celsius in fahrenheit is: {fahrenheit_temperature}");
 }
 
 fn celsius_to_fahrenheit(x: i32) -> i32 {
