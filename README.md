@@ -22,8 +22,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     3. The Slice Type :ballot_box_with_check:
 5. Using Structs to Structure Related Data :hourglass_flowing_sand:
     1. Defining and Instantiating Structs :ballot_box_with_check:
-    2. An Example Program Using Structs :hourglass_flowing_sand:
-    3. Method Syntax
+    2. An Example Program Using Structs :ballot_box_with_check:
+    3. Method Syntax :hourglass_flowing_sand:
 6. Enums and Pattern Matching
     1. Defining an Enum
     2. The match Control Flow Construct

@@ -5,6 +5,19 @@ struct Rectangle {
     height: u32,
 }
 
+// impl implement the method using the desired struct
+impl Rectangle {
+    fn area_with_method(&self) -> u32 {
+        self.width * self.height
+    }
+
+    // we can choose to give a method the same name as one of struct's fields.
+    // Rust differenciates between rect2.width and rect2.width()
+    fn width(&self) -> bool {
+        self.width > 0
+    }
+}
+
 fn main() {
     let scale = 2;
     let rect1 = (30, 50);
@@ -21,6 +34,11 @@ fn main() {
     println!(
         "The area of the rectangle 2 is {} square pixels.",
         area_with_structs(&rect2)
+    );
+
+    println!(
+        "The area of the rectangle 2 using a method is {} square pixels. And is {} that the width is greater than 0",
+        rect2.area_with_method(), rect2.width()
     );
 
     println!("Rect2 is {:#?}", &rect2);
