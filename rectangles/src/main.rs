@@ -5,7 +5,16 @@ struct Rectangle {
     height: u32,
 }
 
-// impl implement the method using the desired struct
+/**
+ * impl implement the method using the desired struct.
+ * All functions defined within an impl block are called
+ * associated functions.
+ * 
+ * Associated functions that aren't methods are ofent used for 
+ * constructors that will return a new instance of the struct.
+ * To access need to use :: after the struct name.
+ * See square implementation below
+ * */ 
 impl Rectangle {
     fn area_with_method(&self) -> u32 {
         self.width * self.height
@@ -16,14 +25,29 @@ impl Rectangle {
     fn width(&self) -> bool {
         self.width > 0
     }
+
+    fn can_hold(&self, rectangle: &Rectangle) -> bool {
+        self.width > rectangle.width && self.height > rectangle.height
+    }
+
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
 }
 
 fn main() {
-    let scale = 2;
+    let scale = 3;
     let rect1 = (30, 50);
     let rect2 = Rectangle {
         width: dbg!(30 * scale),
         height: 50
+    };
+    let rect3 = Rectangle {
+        width: 60,
+        height: 45,
     };
 
     println!(
@@ -44,6 +68,11 @@ fn main() {
     println!("Rect2 is {:#?}", &rect2);
     // dbg! is another way to print structs to help with debugging
     dbg!(&rect2);
+
+    println!("Can rect2 hold rect3? {}", rect2.can_hold(&rect3));
+
+    let sq = Rectangle::square(3);
+    println!("Width of the square is: {} and height of the square is: {}", sq.width, sq.height);
 }
 
 // makes the code more concise but not as clear
