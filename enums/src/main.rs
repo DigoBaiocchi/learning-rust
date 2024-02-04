@@ -17,6 +17,30 @@
  * but Option<i8> could not be a number.
  * If it's required to add these two numbers, we have to convert
  * Option<i8> to i8. It can converted with method unwrap(self)
+ * 
+ * 
+ * Match control flow - 
+ * allows you to compare a value against a series of patterns
+ * and then execute the code when has a match.
+ * 
+ * If statements evaluate the conditions as boolean. In match control flow
+ * it can also be executed by matching the type. At the end, the flow will
+ * execute the first arm that matches the pattern.
+ * 
+ * They can also bind to the parts of the values that match the pattern.
+ * See coin example below for more clarification.
+ * 
+ * We can also use match control flow with Option<T>.
+ * It will check if the type matches
+ * 
+ * The arms' patterns must cover all possibilities otherwise it won't compile.
+ * Matches in Rust are exhaustive, we must exhaust every last possibility in order
+ * to make the code valid and compile.
+ * 
+ * We can use the special word other or the character _ to set default behaviors for results 
+ * that are not specified.
+ * 
+ * 
  * */ 
 
 enum IpAddrKind {
@@ -54,6 +78,44 @@ impl Message {
 //     Some(T),
 // }
 
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+    NewOrleans,
+    NewYork,
+    Washington,
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => {
+            println!("Lucky penny!");
+            1
+        },
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}", state);
+            25
+        },
+    }
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+
 fn main() {
     let four = IpAddrKind::v4;
     let six = IpAddrKind::v6;
@@ -74,6 +136,28 @@ fn main() {
     let some_char = Some('e');
 
     let absent_number: Option<i32> = None;
+    let quarter = value_in_cents(Coin::Quarter(UsState::NewOrleans));
+    let penny = value_in_cents(Coin::Penny);
+
+    println!("The value of a penny is: {}", penny);
+    println!("The value of a quarter is: {}", quarter);
+
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+
+    println!("The value of six is: {}", six.unwrap());
+
+    let dice_roll = 9;
+    match dice_roll {
+        3 => add_fancy_hat(),
+        7 => remove_fancy_hat(),
+        other => move_player(other),
+    }
+
+    fn add_fancy_hat() {}
+    fn remove_fancy_hat() {}
+    fn move_player(num_spaces: i8) {}
 }
 
 fn route(ip_kind: IpAddrKind) {}
