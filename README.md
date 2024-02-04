@@ -25,8 +25,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     2. An Example Program Using Structs :ballot_box_with_check:
     3. Method Syntax :ballot_box_with_check:
 6. Enums and Pattern Matching :hourglass_flowing_sand:
-    1. Defining an Enum :hourglass_flowing_sand:
-    2. The match Control Flow Construct
+    1. Defining an Enum :ballot_box_with_check:
+    2. The match Control Flow Construct :hourglass_flowing_sand:
     3. Concise Control Flow with if let
 7. Managing Growing Projects with Packages, Crates, and Modules
     1. Packages and Crates
