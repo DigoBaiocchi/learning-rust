@@ -40,7 +40,15 @@
  * We can use the special word other or the character _ to set default behaviors for results 
  * that are not specified.
  * 
+ * We are able to print Option values using a match control flow without the need of using unwrap().
  * 
+ * We can use if let to do a more concise control flow, specially when we only need 
+ * to match one pattern and ignore all others.
+ * It's good to keep in mind that using if let instead of match has trade-offs that 
+ * must be considered. A more concise control flow might not catch all
+ * different scenarios that the application might encounter.
+ * 
+ * We can also use else if the if let control flow to execute something for all other patterns.
  * */ 
 
 enum IpAddrKind {
@@ -112,7 +120,10 @@ fn value_in_cents(coin: Coin) -> u8 {
 fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         None => None,
-        Some(i) => Some(i + 1),
+        Some(i) => {
+            println!("the value is: {}", i);
+            Some(i + 1)
+        },
     }
 }
 
@@ -158,6 +169,34 @@ fn main() {
     fn add_fancy_hat() {}
     fn remove_fancy_hat() {}
     fn move_player(num_spaces: i8) {}
+
+    // concise control flow with if let
+    let config_max = Some(3u8);
+    // using match control flow
+    match config_max {
+        Some(max) => println!("The maximum is configured to be {}", max),
+        _ => (),
+    }
+    // using if let
+    if let Some(max) = config_max {
+        println!("The maximum is configured to be {}", max);
+    }
+
+    let coin = Coin::Nickel;
+    let mut count = 0;
+
+    // using match control flow
+    match coin {
+        Coin::Quarter(State) => println!("State quarter from {:?}!", state),
+        _ => count +=1,
+    }
+
+    // using if let else
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {:?}!", state);
+    } else {
+        count += 1;
+    }
 }
 
 fn route(ip_kind: IpAddrKind) {}
