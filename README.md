@@ -24,12 +24,12 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     1. Defining and Instantiating Structs :ballot_box_with_check:
     2. An Example Program Using Structs :ballot_box_with_check:
     3. Method Syntax :ballot_box_with_check:
-6. Enums and Pattern Matching :hourglass_flowing_sand:
+6. Enums and Pattern Matching :ballot_box_with_check:
     1. Defining an Enum :ballot_box_with_check:
-    2. The match Control Flow Construct :hourglass_flowing_sand:
-    3. Concise Control Flow with if let
-7. Managing Growing Projects with Packages, Crates, and Modules
-    1. Packages and Crates
+    2. The match Control Flow Construct :ballot_box_with_check:
+    3. Concise Control Flow with if let :ballot_box_with_check:
+7. Managing Growing Projects with Packages, Crates, and Modules :hourglass_flowing_sand:
+    1. Packages and Crates :hourglass_flowing_sand:
     2. Defining Modules to Control Scope and Privacy
     3. Paths for Referring to an Item in the Module Tree
     4. Bringing Paths Into Scope with the use Keyword
