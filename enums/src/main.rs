@@ -9,6 +9,14 @@
  * Enums can also have functions.
  * In order to use them we use impl as separate block
  * with the same name as the enum
+ * 
+ * Options - they are rust's alternative to null value
+ * Type Option<i8> is different than type i8. 
+ * We wouldn't be able to sum two numbers where one if of type
+ * Option<i8> and the other i8 because i8 it will always be a number
+ * but Option<i8> could not be a number.
+ * If it's required to add these two numbers, we have to convert
+ * Option<i8> to i8. It can converted with method unwrap(self)
  * */ 
 
 enum IpAddrKind {
@@ -31,9 +39,20 @@ enum Message {
 impl Message {
     fn call(&self) {
         // method body would be defined here
-        // String::from("Hello {}")
+        match self {
+            Message::Quit => println!("This quits"),
+            Message::Move { x, y } => println!("x is: {} and y is: {}", x, y),
+            Message::Write(text) => println!("Text message: {}", text),
+            Message::ChangeColor(r, g, b) => println!("r is: {}, g is: {} and b is: {}", r, g, b),
+        }
     }
 }
+
+// Representational of Option under the hood, not required to specify the following code
+// enum Option<T> {
+//     None,
+//     Some(T),
+// }
 
 fn main() {
     let four = IpAddrKind::v4;
@@ -46,7 +65,15 @@ fn main() {
     let loopback = IpAddr::v6(String::from("::1"));
 
     let m = Message::Write(String::from("Hello"));
-    println!("this is new {:?}", m.call());
+    m.call();
+
+    let mut some_number = Some(5);
+    let number = 5;
+    assert_eq!(some_number.unwrap(), number);
+    println!("Value of some_number is: {}", some_number.unwrap());
+    let some_char = Some('e');
+
+    let absent_number: Option<i32> = None;
 }
 
 fn route(ip_kind: IpAddrKind) {}
