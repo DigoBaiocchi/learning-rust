@@ -186,10 +186,10 @@ fn main() {
     let mut count = 0;
 
     // using match control flow
-    match coin {
-        Coin::Quarter(State) => println!("State quarter from {:?}!", state),
-        _ => count +=1,
-    }
+    // match coin {
+    //     Coin::Quarter(state) => println!("State quarter from {:?}!", state),
+    //     _ => count += 1,
+    // }
 
     // using if let else
     if let Coin::Quarter(state) = coin {
