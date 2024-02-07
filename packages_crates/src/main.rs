@@ -21,6 +21,24 @@
  * A package is a bundle of one or more crates that provides a set of 
  * functionality. It can contain as many binary crates as you like, 
  * but at most only one library crate. Package e.g. Cargo.toml
+ * 
+ * When compiling a crate, the compiler first looks in the crate root file,
+ * looking for a library crate or a binary crate to compile
+ * 
+ * You can declare new modules in the crate root file. You can declare
+ * a "garden" module with mod garden;
+ * 
+ * In any file other than the crate root, you can declare submodules.
+ * 
+ * Once a module is part of your crate, you can refer to code in that 
+ * module from anywhere else in that crate, as long as the privacy rules allow,
+ * using the path to the code. For example, an Asparagus in the garden module
+ * would be found at crate::garden::vegetable::Asparagus.
+ * 
+ * Code within a module is private from its parent modules by default.
+ * If you want to make it public, declare it with pub mod instead of just mod.
+ * To make items within a module public as well, use pub before their declarations.
+ * 
  * */ 
 
 fn main() {
