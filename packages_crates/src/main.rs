@@ -39,8 +39,17 @@
  * If you want to make it public, declare it with pub mod instead of just mod.
  * To make items within a module public as well, use pub before their declarations.
  * 
+ * The use keyword creates shortcuts to item to avoid repetition. In a scope you can do the following:
+ * use crate::garden::vegetable::Asparagus
+ * And from there you only need to refer to this module as Asparagus in the scope
+ * 
  * */ 
 
+ use crate::garden::vegetables::Asparagus;
+
+ pub mod garden;
+
 fn main() {
-    println!("Hello, world!");
+    let plant = Asparagus {};
+    println!("I'm growing {:?}!", plant);
 }
