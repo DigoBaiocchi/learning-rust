@@ -30,8 +30,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     3. Concise Control Flow with if let :ballot_box_with_check:
 7. Managing Growing Projects with Packages, Crates, and Modules :hourglass_flowing_sand:
     1. Packages and Crates :ballot_box_with_check:
-    2. Defining Modules to Control Scope and Privacy :hourglass_flowing_sand:
-    3. Paths for Referring to an Item in the Module Tree
+    2. Defining Modules to Control Scope and Privacy :ballot_box_with_check:
+    3. Paths for Referring to an Item in the Module Tree :hourglass_flowing_sand:
     4. Bringing Paths Into Scope with the use Keyword
     5. Separating Modules into Different Files
 8. Common Collections

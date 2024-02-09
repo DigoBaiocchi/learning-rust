@@ -43,6 +43,10 @@
  * use crate::garden::vegetable::Asparagus
  * And from there you only need to refer to this module as Asparagus in the scope
  * 
+ * Modules are private by default.
+ * If a module A is contained inside module B, we say that module A is the child of module B
+ * and module B is the parent of module A.
+ * 
  * */ 
 
  use crate::garden::vegetables::Asparagus;
