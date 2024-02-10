@@ -1,7 +1,13 @@
-mod front_of_house {
-    mod hosting {
-        fn add_to_waitlist() {}
+/**
+ * front_of_house and eat_at_restaurant are siblings so that's
+ * why we don't have to add pub to front_of_house in order to
+ * be accessed by eat_at_restaurant.
+ * */ 
 
+mod front_of_house {
+    pub mod hosting {
+        pub fn add_to_waitlist() {}
+        
         fn seat_at_table() {}
     }
 
@@ -12,4 +18,12 @@ mod front_of_house {
 
         fn take_payment() {}
     }
+}
+
+pub fn eat_at_restaurant() {
+    // absolute path
+    crate::front_of_house::hosting::add_to_waitlist();
+
+    // relative path
+    front_of_house::hosting::add_to_waitlist();
 }

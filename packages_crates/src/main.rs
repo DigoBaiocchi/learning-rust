@@ -47,6 +47,19 @@
  * If a module A is contained inside module B, we say that module A is the child of module B
  * and module B is the parent of module A.
  * 
+ * To call a function we need to know its path.
+ * A path can take two forms.
+ * Absolute path: full path starting from the crate, it starts with the literal crate.
+ * Relative path: starts from the current module and uses self, super or an identifier
+ * in the current module.
+ * Both paths are followed by a ::.
+ * 
+ * Choosing whether to use a relative or absolute path is a decision you'll make based
+ * on your project and depends if you are more likely to move item definion code separately from
+ * or together with the code that uses the item.
+ * 
+ * The privacy rules apply to structs, enums, functions, methods and modules.
+ * 
  * */ 
 
  use crate::garden::vegetables::Asparagus;
