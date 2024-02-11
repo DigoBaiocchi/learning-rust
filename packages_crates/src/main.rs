@@ -70,6 +70,31 @@
  * 
  * If we make an enum public, all of its variants are then public. We only need the pub before the enum keyword.
  * 
+ * We can use the keyword use to use the last module specified, e.g. use crate::front_of_house::hosting and now
+ * we only need to use hosting across our code to access what is inside hosting.
+ * 
+ * use only creates the shortcut for the particular scope in which the use occurs.
+ * 
+ * The idiomatic way to use the keyword use is specifying the path up to the function's module parent.
+ * It is clear that the function belongs to a different module.
+ * 
+ * However, when we are bringing in structs, enums and other items with use, it is idiomatic
+ * to specify the full path.
+ * The only exception for this rule is if we are trying to bring two items that have they share
+ * the same name.
+ * An alternative for this situation is to use the keyword as. If we have two path like:
+ * std::fmt::Result;
+ * std::io::Result;
+ * We can rename one of them using the keyword as 
+ * use std::fmt::Result;
+ * use std::io::Result as IoResult;
+ * 
+ * When we bring a name into scope with the use keyword, the name available in 
+ * the new scope is private. In order to make the name available to external code
+ * we would have to add pub before the use keyword. This is called re-exporting.
+ * 
+ * use is also used to make available packages that are declared in Cargo.toml.
+ * And also rust library like std.
  * */ 
 
  use crate::garden::vegetables::Asparagus;
