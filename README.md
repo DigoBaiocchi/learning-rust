@@ -31,8 +31,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
 7. Managing Growing Projects with Packages, Crates, and Modules :hourglass_flowing_sand:
     1. Packages and Crates :ballot_box_with_check:
     2. Defining Modules to Control Scope and Privacy :ballot_box_with_check:
-    3. Paths for Referring to an Item in the Module Tree :hourglass_flowing_sand:
-    4. Bringing Paths Into Scope with the use Keyword
+    3. Paths for Referring to an Item in the Module Tree :ballot_box_with_check:
+    4. Bringing Paths Into Scope with the use Keyword :hourglass_flowing_sand:
     5. Separating Modules into Different Files
 8. Common Collections
     1. Storing Lists of Values with Vectors
