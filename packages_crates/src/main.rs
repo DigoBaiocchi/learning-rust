@@ -60,6 +60,16 @@
  * 
  * The privacy rules apply to structs, enums, functions, methods and modules.
  * 
+ * We can user super to define a relative path, it works as .. is used in the start of a filestream command.
+ * This makes the rearranging of the module tree easier when the module is closely related to
+ * the parent but the parent mightt be moved elsewhere in the module tree someday.
+ * 
+ * In structs, we can make the struct public but choose which of the struct's fields should be kept private.
+ * If we have a private field in a public struct, the struct needs to provide a fublic associated function
+ * that constructs an instance of the struct (see restaurant project, summer function is defined in Breakfast struct).
+ * 
+ * If we make an enum public, all of its variants are then public. We only need the pub before the enum keyword.
+ * 
  * */ 
 
  use crate::garden::vegetables::Asparagus;
