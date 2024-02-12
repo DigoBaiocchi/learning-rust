@@ -32,8 +32,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     1. Packages and Crates :ballot_box_with_check:
     2. Defining Modules to Control Scope and Privacy :ballot_box_with_check:
     3. Paths for Referring to an Item in the Module Tree :ballot_box_with_check:
-    4. Bringing Paths Into Scope with the use Keyword :hourglass_flowing_sand:
-    5. Separating Modules into Different Files
+    4. Bringing Paths Into Scope with the use Keyword :ballot_box_with_check:
+    5. Separating Modules into Different Files :hourglass_flowing_sand:
 8. Common Collections
     1. Storing Lists of Values with Vectors
     2. Storing UTF-8 Encoded Text with Strings
