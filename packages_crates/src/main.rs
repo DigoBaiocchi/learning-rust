@@ -95,6 +95,27 @@
  * 
  * use is also used to make available packages that are declared in Cargo.toml.
  * And also rust library like std.
+ * 
+ * if we are using multiple items defined in the same crate we can group them between {}.
+ * The following:
+ * use std::cmp::Ordering;
+ * use std::io;
+ * would be like:
+ * use std::{cmp::Orderng, io};
+ * We can use a nested path at any level in a path, which is useful when combining two
+ * use statements that share a subpath.
+ * The following,
+ * use std::io;
+ * use std::io::Write;
+ * would be,
+ * use std::io::{self, Write};
+ * We use self to merge the two paths into one use statement.
+ * 
+ * If we want to bring all public items defined in a path into scope, we can specify that
+ * path followed by the * glob operator.
+ * use std::collections::*;
+ * All items definied in collections will be brought to current scope.
+ * Glob operator is usually used under the test module.
  * */ 
 
  use crate::garden::vegetables::Asparagus;
