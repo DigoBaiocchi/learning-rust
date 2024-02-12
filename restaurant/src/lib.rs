@@ -4,23 +4,7 @@
  * be accessed by eat_at_restaurant.
  * */ 
 
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {
-            let _meal = super::super::back_of_house::Breakfast::summer("toast");
-        }
-        
-        fn _seat_at_table() {}
-    }
-
-    mod serving {
-        fn _take_order() {}
-        
-        fn _serve_order() {}
-
-        fn _take_payment() {}
-    }
-}
+mod front_of_house;
 
 pub use crate::front_of_house::hosting;
 
