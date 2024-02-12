@@ -28,14 +28,14 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     1. Defining an Enum :ballot_box_with_check:
     2. The match Control Flow Construct :ballot_box_with_check:
     3. Concise Control Flow with if let :ballot_box_with_check:
-7. Managing Growing Projects with Packages, Crates, and Modules :hourglass_flowing_sand:
+7. Managing Growing Projects with Packages, Crates, and Modules :ballot_box_with_check:
     1. Packages and Crates :ballot_box_with_check:
     2. Defining Modules to Control Scope and Privacy :ballot_box_with_check:
     3. Paths for Referring to an Item in the Module Tree :ballot_box_with_check:
     4. Bringing Paths Into Scope with the use Keyword :ballot_box_with_check:
-    5. Separating Modules into Different Files :hourglass_flowing_sand:
-8. Common Collections
-    1. Storing Lists of Values with Vectors
+    5. Separating Modules into Different Files :ballot_box_with_check:
+8. Common Collections :hourglass_flowing_sand:
+    1. Storing Lists of Values with Vectors :hourglass_flowing_sand:
     2. Storing UTF-8 Encoded Text with Strings
     3. Storing Keys with Associated Values in Hash Maps
 9. Error Handling
