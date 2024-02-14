@@ -3,6 +3,17 @@
  * 
  * A vector Vec<T> can hold any type.
  * */ 
+ /**
+  * The following code will throw an error because when you create a vector
+  * some space in memory is allocated for it, and when a new
+  * number is added to the vector, the currect memory is deallocated and new
+  * memory is allocated for the updated vector. So when you try to print
+  * the variable first, it would be trying to read deallocated memory. 
+  * let mut v = vec![1, 2, 3, 4 , 5];
+  * let first = &v[0];
+  * v.push(6);
+  * println!("The first element is: {first}");
+  * */ 
 
 fn main() {
     let mut v: Vec<i32> = Vec::new();
@@ -20,6 +31,19 @@ fn main() {
     match third_again {
         Some(third_again) => println!("The third element again is {third_again}"),
         None => println!("There is no third element."),
+    }
+
+    // loop through vector and change each number
+    // we need to use * deference to get the value i before we can use the +=
+    let mut vector = vec![100, 32, 87];
+    for i in &mut vector {
+        *i += 50;
+        println!("{i}");
+    }
+    let second = vector.get(1);
+    match second {
+        Some(&second) => println!("{}", second),
+        None => println!("Nothing"),
     }
 
 }
