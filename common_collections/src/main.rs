@@ -15,6 +15,8 @@
  * Enums can be used as a way to add different types to a vector.
  * The enum, with different types, would be added to the vector and all values
  * would be the type enum.
+ * 
+ * Like any other struct, a vector is freed when it goes out of scope.
  * */ 
 
 fn main() {
