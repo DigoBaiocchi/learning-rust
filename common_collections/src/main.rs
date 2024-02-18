@@ -1,4 +1,5 @@
 /**
+ * VECTORS
  * Vectors can only store values of the same type.
  * A vector Vec<T> can hold any type.
  * 
@@ -17,6 +18,24 @@
  * would be the type enum.
  * 
  * Like any other struct, a vector is freed when it goes out of scope.
+ * 
+ * 
+ * STRINGS
+ * Rust only has one string type, which is the string slice str that is usually
+ * seen in its borrowed form &str.
+ * The String type is a growable, mutable, owned, UTF-8 encoded string type.
+ * 
+ * Many of the same operations available with Vectors are also available with String
+ * becasue String is actually implemented as a wrapper around a vector of bytes
+ * with some extra guarantees, restrictions and capabilities.
+ * 
+ * Use push_str concatenate strings and push to add chars to strings.
+ * 
+ * If we use the + sign to concatenate strings and assign the result to a variable. 
+ * Everything that was not passed as a reference will have the ownership transferred 
+ * to the new variable.
+ * If we use format! function to concatenate strings, the string variables will its
+ * ownership transferred.
  * */ 
 
 fn main() {
@@ -61,5 +80,33 @@ fn main() {
         SpreadsheetCell::Text(String::from("blue")),
         SpreadsheetCell::Float(10.12),
     ];
+
+    let data = "initial contents";
+
+    let s = data.to_string();
+    // OR
+    let s2 = String::from("initial contents");
+
+    println!("{} or {}", s, s2);
+
+    let mut t = String::from("foo");
+    t.push_str("bar");
+    println!("{}", t);
+
+    let mut s1 = String::from("foo");
+    let s2 = "bar";
+    // s2 ownership is transferred to s1 here so it can't be used anymore
+    s1.push_str(s2);
+    println!("{}", s2);
+
+    let s3 = "Haha";
+    let s4 = s1 + &s3;
+    println!("{s4}");
+
+    let s1 = String::from("tic");
+    let s2 = String::from("tac");
+    let s3 = String::from("toe");
+
+    let s = format!("{s1}-{s2}-{s3}");
 
 }
