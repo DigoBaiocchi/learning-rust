@@ -36,6 +36,19 @@
  * to the new variable.
  * If we use format! function to concatenate strings, the string variables will its
  * ownership transferred.
+ * 
+ * We can't index string like hello[0] because indexing in Rust would only return
+ * the UTF-8 code and not the actual first character of hello in this case.
+ * 
+ * We can get a string slice specifying the range of bytes that should return from
+ * the string, like hello[0..4]. In this case, it will return the bytes that were 
+ * stored from 0 to 3.
+ * 
+ * The best way to iterate through strings is to be explicit about whether you
+ * want characters or bytes. Using the chars or bytes method.
+ * 
+ * Be aware that valid Unicode scalar values may be made up of more than 1 byte,
+ * so this will influence on how you should get a slice of a string.
  * */ 
 
 fn main() {
@@ -108,5 +121,18 @@ fn main() {
     let s3 = String::from("toe");
 
     let s = format!("{s1}-{s2}-{s3}");
+
+    let hello = "Здравствуйте";
+
+    let s = &hello[0..4];
+    println!("{s}");
+
+    for c in hello.chars() {
+        println!("{c}");
+    }
+
+    for c in hello.bytes() {
+        println!("{c}");
+    }
 
 }

@@ -36,8 +36,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     5. Separating Modules into Different Files :ballot_box_with_check:
 8. Common Collections :hourglass_flowing_sand:
     1. Storing Lists of Values with Vectors :ballot_box_with_check:
-    2. Storing UTF-8 Encoded Text with Strings :hourglass_flowing_sand:
-    3. Storing Keys with Associated Values in Hash Maps
+    2. Storing UTF-8 Encoded Text with Strings :ballot_box_with_check:
+    3. Storing Keys with Associated Values in Hash Maps :hourglass_flowing_sand:
 9. Error Handling
     1. Unrecoverable Errors with panic!
     2. Recoverable Errors with Result
