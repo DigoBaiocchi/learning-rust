@@ -39,8 +39,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     2. Storing UTF-8 Encoded Text with Strings :ballot_box_with_check:
     3. Storing Keys with Associated Values in Hash Maps :ballot_box_with_check:
 9. Error Handling :hourglass_flowing_sand:
-    1. Unrecoverable Errors with panic! :hourglass_flowing_sand:
-    2. Recoverable Errors with Result
+    1. Unrecoverable Errors with panic! :ballot_box_with_check:
+    2. Recoverable Errors with Result :hourglass_flowing_sand:
     3. To panic! or Not to panic!
 10. Generic Types, Traits, and Lifetimes
     1. Generic Data Types
