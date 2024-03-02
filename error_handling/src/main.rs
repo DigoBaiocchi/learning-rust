@@ -10,6 +10,9 @@
  * return the error to the calling code so that it can decide what
  * to do. This is known as propagating the error
  * 
+ * The ? symbol can also be used to replace the match statement.
+ * It should be placed after the statement we want to do.
+ * 
  * 
  **/
 
@@ -35,7 +38,7 @@ fn main() {
         },
     };
 
-    // logic above can be rewrite without match statements
+    // logic above can be rewritten without match statements
     let _greeting_file = File::open("hello.txt").unwrap_or_else(|error| {
         if error.kind() == ErrorKind::NotFound {
             File::create("hello.txt").unwrap_or_else(|error| {
@@ -69,4 +72,12 @@ fn _read_username_from_file() -> Result<String, io::Error> {
         Ok(_) => Ok(username),
         Err(e) => Err(e),
     }
+}
+
+// logic above can be rewritten using the ? symbil
+fn _read_user_from_file_2() -> Result<String, io::Error> {
+    let mut username_file = File::open("hello.txt")?;
+    let mut username = String::new();
+    username_file.read_to_string(&mut username)?;
+    Ok(username)
 }
