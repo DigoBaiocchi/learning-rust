@@ -40,8 +40,8 @@ I'm using the [rust documentation](https://doc.rust-lang.org/book/title-page.htm
     3. Storing Keys with Associated Values in Hash Maps :ballot_box_with_check:
 9. Error Handling :hourglass_flowing_sand:
     1. Unrecoverable Errors with panic! :ballot_box_with_check:
-    2. Recoverable Errors with Result :hourglass_flowing_sand:
-    3. To panic! or Not to panic!
+    2. Recoverable Errors with Result :ballot_box_with_check:
+    3. To panic! or Not to panic! :hourglass_flowing_sand:
 10. Generic Types, Traits, and Lifetimes
     1. Generic Data Types
     2. Traits: Defining Shared Behavior
